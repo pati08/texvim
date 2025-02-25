@@ -81,7 +81,15 @@ in {
       enable = true;
       settings.highlight.enable = true;
     };
-    luasnip.enable = true;
+    luasnip = {
+      enable = true;
+      paths = [
+        {
+          paths = ./tex.snippets;
+          include = [ "tex" ];
+        }
+      ];
+    };
     comment = {
       enable = true;
       settings.sticky = true;
@@ -150,10 +158,8 @@ in {
         };
         sources = [
           { name = "nvim_lsp"; }
-          # { name = "vsnip"; }
           { name = "luasnip"; }
           { name = "path"; }
-          { name = "buffer"; }
         ];
       };
     };
