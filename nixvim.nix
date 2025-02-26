@@ -83,7 +83,7 @@ in {
     };
     luasnip = {
       enable = true;
-      paths = [
+      fromLua = [
         {
           paths = ./tex.snippets;
           include = [ "tex" ];
